@@ -1,0 +1,1405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ostep_projects"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/naruto/StudyDir/ostep-projects/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/naruto/StudyDir/ostep-projects/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/naruto/StudyDir/ostep-projects/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ostep_projects">
+				<Option output="/home/naruto/StudyDir/ostep-projects/cmake-build-debug/ostep_projects" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/naruto/StudyDir/ostep-projects/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/."/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/concurrency-mapreduce"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/concurrency-pzip"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/concurrency-webserver"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/concurrency-webserver/src"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/concurrency-xv6-threads"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/filesystems-checker"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/filesystems-distributed"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/initial-kv"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/initial-reverse"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/initial-utilities"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/initial-xv6"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/processes-shell"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/scheduling-xv6-lottery"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/tester"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/vm-xv6-intro"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 ostep_projects"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ostep_projects/fast">
+				<Option output="/home/naruto/StudyDir/ostep-projects/cmake-build-debug/ostep_projects" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/naruto/StudyDir/ostep-projects/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/."/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/concurrency-mapreduce"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/concurrency-pzip"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/concurrency-webserver"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/concurrency-webserver/src"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/concurrency-xv6-threads"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/filesystems-checker"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/filesystems-distributed"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/initial-kv"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/initial-reverse"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/initial-utilities"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/initial-xv6"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/processes-shell"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/scheduling-xv6-lottery"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/tester"/>
+					<Add directory="/home/naruto/StudyDir/ostep-projects/vm-xv6-intro"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 ostep_projects/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/naruto/StudyDir/ostep-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/.idea/.gitignore">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/.idea/codeStyles/codeStyleConfig.xml">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/.idea/misc.xml">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/.idea/modules.xml">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/.idea/ostep-projects.iml">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/.idea/sonarlint/issuestore/index.pb">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/.idea/vcs.xml">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/.idea/workspace.xml">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/INSTALL-xv6.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/concurrency-mapreduce/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/concurrency-mapreduce/mapreduce.h">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/concurrency-pzip/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/concurrency-webserver/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/concurrency-webserver/src/Makefile">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/concurrency-webserver/src/io_helper.c">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/concurrency-webserver/src/io_helper.h">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/concurrency-webserver/src/request.c">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/concurrency-webserver/src/request.h">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/concurrency-webserver/src/spin.c">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/concurrency-webserver/src/wclient.c">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/concurrency-webserver/src/wserver.c">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/concurrency-xv6-threads/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/filesystems-checker/CONTEST.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/filesystems-checker/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/filesystems-distributed/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/filesystems-distributed/mfs.h">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-kv/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-kv/test-kv.sh">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-kv/tests/1.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-kv/tests/1.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-kv/tests/1.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-kv/tests/1.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-kv/tests/1.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-kv/tests/2.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-kv/tests/2.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-kv/tests/2.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-kv/tests/2.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-kv/tests/2.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-kv/tests/3.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-kv/tests/3.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-kv/tests/3.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-kv/tests/3.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-kv/tests/3.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/test-reverse.sh">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/1.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/1.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/1.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/1.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/1.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/2.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/2.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/2.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/2.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/2.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/3.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/3.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/3.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/3.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/3.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/4.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/4.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/4.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/4.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/4.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/5.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/5.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/5.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/5.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/5.post">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/5.pre">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/5.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/5.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/6.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/6.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/6.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/6.other">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/6.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/6.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/6.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/7.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/7.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/7.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/7.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/7.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-reverse/tests/7.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/FUTURE.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/test-wcat.sh">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/1.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/1.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/1.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/1.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/1.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/1.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/2.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/2.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/2.in.a">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/2.in.b">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/2.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/2.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/2.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/3.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/3.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/3.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/3.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/3.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/3.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/4.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/4.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/4.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/4.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/4.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/5.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/5.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/5.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/5.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/5.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/5.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/6.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/6.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/6.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/6.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/6.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/7.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/7.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/7.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/7.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/7.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/7a.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/7b.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/7d.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wcat/tests/filegen.py">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/test-wgrep.sh">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/1.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/1.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/1.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/1.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/1.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/1.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/2.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/2.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/2.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/2.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/2.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/3.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/3.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/3.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/3.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/3.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/4.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/4.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/4.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/4.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/4.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/4.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/4.stdin">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/5.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/5.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/5.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/5.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/5.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/5.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/6.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/6.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/6.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/6.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/6.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/6.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/7.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/7.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/7.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/7.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/7.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wgrep/tests/7.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/test-wunzip.sh">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/1.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/1.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/1.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/1.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/1.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/1.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/2.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/2.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/2.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/2.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/2.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/2.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/2a.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/2b.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/2c.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/3.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/3.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/3.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/3.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/3.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/4.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/4.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/4.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/4.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/4.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/4.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/5.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/5.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/5.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/5.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/5.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/5.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/6.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/6.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/6.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/6.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/6.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wunzip/tests/6.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/test-wzip.sh">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/1.binary">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/1.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/1.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/1.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/1.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/1.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/1.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/2.binary">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/2.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/2.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/2.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/2.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/2.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/3.binary">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/3.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/3.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/3.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/3.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/3.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/4.binary">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/4.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/4.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/4.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/4.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/4.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/4.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/5.binary">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/5.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/5.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/5.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/5.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/5.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/5.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/6.binary">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/6.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/6.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/6.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/6.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/6.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/6.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/tests/filegen.py">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-utilities/wzip/wzip.c">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-xv6/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-xv6/background.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-xv6/test-getreadcount.sh">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-xv6/tests/1.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-xv6/tests/1.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-xv6/tests/1.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-xv6/tests/1.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-xv6/tests/1.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-xv6/tests/2.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-xv6/tests/2.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-xv6/tests/2.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-xv6/tests/2.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-xv6/tests/2.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-xv6/tests/pre">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-xv6/tests/test_1.c">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/initial-xv6/tests/test_2.c">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/test-wish.sh">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/1.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/1.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/1.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/1.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/1.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/1.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/10.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/10.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/10.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/10.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/10.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/10.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/11.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/11.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/11.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/11.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/11.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/11.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/12.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/12.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/12.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/12.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/12.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/12.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/13.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/13.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/13.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/13.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/13.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/13.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/14.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/14.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/14.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/14.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/14.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/14.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/15.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/15.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/15.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/15.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/15.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/15.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/16.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/16.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/16.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/16.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/16.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/16.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/17.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/17.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/17.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/17.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/17.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/17.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/18.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/18.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/18.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/18.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/18.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/18.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/19.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/19.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/19.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/19.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/19.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/19.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/2.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/2.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/2.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/2.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/2.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/2.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/20.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/20.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/20.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/20.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/20.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/20.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/21.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/21.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/21.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/21.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/21.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/21.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/22.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/22.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/22.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/22.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/22.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/22.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/3.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/3.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/3.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/3.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/3.pre">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/3.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/3.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/4.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/4.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/4.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/4.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/4.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/4.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/5.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/5.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/5.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/5.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/5.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/5.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/6.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/6.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/6.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/6.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/6.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/6.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/7.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/7.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/7.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/7.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/7.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/7.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/8.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/8.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/8.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/8.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/8.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/8.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/9.desc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/9.err">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/9.in">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/9.out">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/9.rc">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/9.run">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/p1.sh">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/p2.sh">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/p2a-test/test1">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/p2a-test/test2">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/p2a-test/test3">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/p2a-test/test4">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/p3.sh">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/p4.sh">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/processes-shell/tests/p5.sh">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/scheduling-xv6-lottery/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/tester/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/tester/run-tests.sh">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/tester/run-xv6-command.exp">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/tester/xv6-edit-makefile.sh">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/vm-xv6-intro/README.md">
+			<Option target="ostep_projects"/>
+		</Unit>
+		<Unit filename="/home/naruto/StudyDir/ostep-projects/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
