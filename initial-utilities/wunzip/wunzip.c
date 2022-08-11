@@ -35,6 +35,8 @@ int main(int argc, char* argv[])
                 printf("%c", c);
             }
         }
+
+        fclose(fp);
     }
 
     return 0;
