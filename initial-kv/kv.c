@@ -5,15 +5,15 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
-#define MAX_KEY 100
+#define MAX_KEY 1234568
 
 struct List_node
 {
-    const char* malloc_ptr;
+    char* malloc_ptr;
     struct List_node* next;
 };
-
 
 const char *databaseName = "database.txt";
 
@@ -21,7 +21,7 @@ const char *databaseName = "database.txt";
 char writeFlag = 0;
 
 /* 由于这里只是为了通过测试用例，假设作为键(int类型)的范围不超过1024，且为非负值，所以使用数组来模拟map，在一些工作负载下会浪费空间，但会节约查找的时间 */
-const char* map[MAX_KEY] = { "" };
+char* map[MAX_KEY] = { NULL };
 
 /* 需要释放的动态内存链表的头结点 */
 struct List_node* head;
@@ -29,19 +29,19 @@ struct List_node* head;
 void insertNodeToList(struct List_node* head, struct List_node* node)
 {
     node->next = head->next;
-    head.next = node;
+    head->next = node;
 }
 
 int loadDbToMemory()
 {
-    FILE *dbFp = fopen(databaseName, 'r');
+    FILE *dbFp = fopen(databaseName, "r");
     if(NULL == dbFp)
     {
         return -1;
     }
 
     char *temPtr = NULL;
-    int size = 0;
+    size_t size = 0;
     while(getline(&temPtr, &size, dbFp) != -1)
     {
         struct List_node* cur_node = (struct List_node*)malloc(sizeof(struct List_node));
@@ -50,8 +50,8 @@ int loadDbToMemory()
 
         char* memPtr = strsep(&temPtr, ",");
         int key = atoi(memPtr);
-        const char* value = memPtr + strlen(memPtr) + 1;
-        map[key] = value;
+        //const char* value = memPtr + strlen(memPtr) + 1;
+        map[key] = strsep(&temPtr, ",");
 
         temPtr = NULL;
     }
@@ -68,33 +68,36 @@ int isTwoCommandSame(const char *com1, const char *com2)
 
 void processGet(int key)
 {
-    if(strcmp(map[key], "") == 0)
+    if(map[key] == NULL)
     {
-        fprintf(stderr, "Key %d not found\n", key);
+        fprintf(stdout, "%d not found\n", key);
         return;
     }
 
-    printf("%d,%s\n", key, map[key]);
+    printf("%d,%s", key, map[key]);
 }
 
-void processPut(int key, const char* value)
+void processPut(int key, char* value)
 {
-    if(strcmp(map[key], value) == 0)
-    {
-        return;
-    }
-    else if(strcmp(map[key], "") == 0)
-    {
-        map[key] = value;
-        writeFlag = 1;
-    }
+//    if(strcmp(map[key], value) == 0)
+//    {
+//        return;
+//    }
+//    else if(map[key] == NULL)
+//    {
+//        map[key] = value;
+//        writeFlag = 1;
+//    }
+
+    map[key] = value;
+    writeFlag = 1;
 }
 
 void processAll()
 {
     for(int i = 0; i < MAX_KEY; ++i)
     {
-        if(strcmp(map[i], "") != 0)
+        if(map[i] != NULL)
         {
             printf("%d,%s\n", i, map[i]);
         }
@@ -111,22 +114,25 @@ void processClear()
 
     fclose(dbFp);
 
-    map = { "" };
+    for(int i = 0; i < MAX_KEY; ++i)
+    {
+        map[i] = NULL;
+    }
 }
 
 void processDelete(int key)
 {
-    if(strcmp(map[key], "") == 0)
+    if(map[key] == NULL)
     {
         fprintf(stderr, "Key %d not found\n", key);
         return;
     }
 
-    map[key] = "";
+    map[key] = NULL;
     writeFlag = 1;
 }
 
-void processInstruction(const char* instruction)
+void processInstruction(char* instruction)
 {
     const char* command = strsep(&instruction, ",");
 
@@ -139,7 +145,7 @@ void processInstruction(const char* instruction)
     else if(isTwoCommandSame(command, "p"))
     {
         int key = atoi(strsep(&instruction, ","));
-        const char* value = strsep(&instruction, ",");
+        char* value = strsep(&instruction, ",");
         processPut(key, value);
     }
     else if(isTwoCommandSame(command, "g"))
@@ -164,7 +170,7 @@ void processInstruction(const char* instruction)
 
 int writeDataToDb()
 {
-    FILE *dbFp = fopen(databaseName, 'w');
+    FILE *dbFp = fopen(databaseName, "w");
     if(NULL == dbFp)
     {
         return -1;
@@ -172,7 +178,7 @@ int writeDataToDb()
 
     for(int i = 0; i < MAX_KEY; ++i)
     {
-        if(strcmp(map[i], "") != 0)
+        if(map[i] != NULL)
         {
             fprintf(dbFp, "%d,%s\n", i, map[i]);
         }
@@ -185,6 +191,7 @@ void freeDynamicMomery()
 {
     struct List_node* cur_node = head->next;
     struct List_node* next_node = NULL;
+    free(head);
 
     while(cur_node)
     {
@@ -199,12 +206,13 @@ int main(int argc, char* argv[])
 {
     if(argc == 1)
     {
-        fprintf(stderr, "You should give some instructions!\n");
-        exit(1);
+        return 0;
     }
 
+    head = (struct List_node*)malloc(sizeof(struct List_node));
+
     int loadState = loadDbToMemory();
-    if(load_state == -1)
+    if(loadState == -1)
     {
         fprintf(stderr, "kv: cannot open db file\n");
         exit(1);
@@ -214,7 +222,6 @@ int main(int argc, char* argv[])
     {
         processInstruction(argv[i]);
     }
-
 
     if(writeFlag)
     {
