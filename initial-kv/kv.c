@@ -136,13 +136,7 @@ void processInstruction(char* instruction)
 {
     const char* command = strsep(&instruction, ",");
 
-    if(!(isTwoCommandSame(command, "p") || isTwoCommandSame(command, "g") || isTwoCommandSame(command, "a") ||
-            isTwoCommandSame(command, "c") || isTwoCommandSame(command, "d")))
-    {
-        fprintf(stderr, "bad command %s", command);
-        return;
-    }
-    else if(isTwoCommandSame(command, "p"))
+    if(isTwoCommandSame(command, "p"))
     {
         int key = atoi(strsep(&instruction, ","));
         char* value = strsep(&instruction, ",");
@@ -162,9 +156,13 @@ void processInstruction(char* instruction)
         int key = atoi(strsep(&instruction, ","));
         processDelete(key);
     }
-    else
+    else if(isTwoCommandSame(command, "c"))
     {
         processClear();
+    }
+    else
+    {
+        fprintf(stderr, "bad command %s", command);
     }
 }
 
