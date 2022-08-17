@@ -10,23 +10,52 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <dirent.h>
+#include <errno.h>
 
 
 #define MAX_ARG_NUM 5                //单条命令最大的参数数量
+#define MAX_REDIRECTION_NUM  5       //单条命令允许的最大重定向文件数
 #define MAX_COMMAND_PER_Line 20      //每行允许最多并行的命令数
 
 
+/***                        内存管理函数                                 ***/
+char* copyStringUsingMalloc(char* src)
+{
+    if(src == NULL)
+    {
+        return NULL;
+    }
+
+    char* dest = NULL;
+    int destLen = strlen(src) + 1;
+    if((dest = (char *) malloc(destLen)) == NULL)
+    {
+        return NULL;
+    }
+    memcpy(dest, src, destLen - 1);
+    dest[destLen - 1] = '\0';
+
+    return dest;
+}
+
 /***          管理shellpath的链表的数据结构及相关操作                     ***/
 struct ShellPathNode {
-    const char *shellPath;
+    char *shellPath;
     struct ShellPathNode *next;
 };
 
 /* 管理shellpath的链表的头节点 */
 struct ShellPathNode *pathHead;
 
-void insertNewShellPath(const char *path) {
-    struct ShellPathNode *pathNode = (struct ShellPathNode *) malloc(sizeof(struct ShellPathNode));
+void insertNewShellPath(char *path) {
+    struct ShellPathNode *pathNode = NULL;
+    pathNode = (struct ShellPathNode *) malloc(sizeof(struct ShellPathNode));
+    if(pathNode == NULL)
+    {
+        printf("malloc filed\n");
+        return;
+    }
     pathNode->shellPath = path;
     pathNode->next = pathHead->next;
     pathHead->next = pathNode;
@@ -34,8 +63,12 @@ void insertNewShellPath(const char *path) {
 
 void initShellPath() {
     pathHead = (struct ShellPathNode *) malloc(sizeof(struct ShellPathNode));
+    bzero(pathHead, sizeof(struct ShellPathNode));
+    pathHead->next = NULL;
 
-    const char *necessaryPath = "/bin";
+    char* necessaryPath = NULL;
+    char buffer[5] = "/bin";
+    necessaryPath = copyStringUsingMalloc(buffer);
     insertNewShellPath(necessaryPath);
 }
 
@@ -43,6 +76,8 @@ void freeShellPathList() {
     struct ShellPathNode *curNode = pathHead->next;
     while (curNode) {
         struct ShellPathNode *nextNode = curNode->next;
+        free(curNode->shellPath);
+        curNode->shellPath = NULL;
         free(curNode);
         curNode = nextNode;
     }
@@ -50,17 +85,19 @@ void freeShellPathList() {
 }
 
 int isShellPathEmpty() {
-    return !(pathHead->next == NULL);
+    return (pathHead->next == NULL) ? 1 : 0;
 }
 
 
 /***       存放命令行解析得出的单条指令的命令和参数的数据结构                                         ***/
 struct CommandInfo {
     char *command;
+    int isBuiltInCmd;
+    int isValidatyCmd;
     int argc;
-    char *argv[MAX_ARG_NUM];
+    char* argv[MAX_ARG_NUM];
     int needRedirection;
-    char *fileNameOfRedirection;
+    char* fileNameOfRedirection;
 };
 
 struct CommandInfo cmdInfoSet[MAX_COMMAND_PER_Line];
@@ -75,7 +112,15 @@ void insertNewCommandInfo(struct CommandInfo cmdInfo) {
 }
 
 void clearCmdInfoSet() {
-    bzero(&cmdInfoSet, '\0');
+    for(int i = 0; i < curPosOfcmdInfo; ++i)
+    {
+        if(cmdInfoSet[i].isValidatyCmd && (cmdInfoSet[i].isBuiltInCmd != 1))
+        {
+            free(cmdInfoSet[i].command);
+        }
+    }
+
+    bzero(&cmdInfoSet, MAX_COMMAND_PER_Line * sizeof(struct CommandInfo));
     curPosOfcmdInfo = 0;
 }
 
@@ -87,6 +132,7 @@ void printErrorMassageToStderr() {
 
 void freeDynamicMemory() {
     freeShellPathList();
+    clearCmdInfoSet();
     free(pathHead);
 }
 
@@ -96,14 +142,21 @@ void exitForErrorWithoutMemoryLeak() {
     exit(1);
 }
 
-int checkvalidityOfNonBuiltInCommand(const struct CommandInfo *cmdInfo) {
+int checkvalidityOfNonBuiltInCommand(struct CommandInfo *cmdInfo) {
+    if(cmdInfo->needRedirection == -1)
+    {
+        return -1;
+    }
+
     struct ShellPathNode *workNode = pathHead->next;
     while (workNode) {
         struct ShellPathNode *nextNode = workNode->next;
 
-        char *absolutePath = (char *) malloc(sizeof(strlen(workNode->shellPath) + strlen(cmdInfo->command) + 1));
-        sprintf(absolutePath, "%s%s%s", workNode->shellPath, "/", cmdInfo->command);
+        char *absolutePath = (char *) malloc(strlen(workNode->shellPath) + strlen(cmdInfo->command) + 1 + 1);
+        sprintf(absolutePath, "%s%s%s%c", workNode->shellPath, "/", cmdInfo->command, '\0');
         if (access(absolutePath, X_OK) == 0) {
+            cmdInfo->isValidatyCmd = 1;
+            cmdInfo->command = absolutePath;
             return 0;
         }
         free(absolutePath);
@@ -114,8 +167,14 @@ int checkvalidityOfNonBuiltInCommand(const struct CommandInfo *cmdInfo) {
     return -1;
 }
 
-int checkIsCommandBuiltIn(const struct CommandInfo *cmdInfo) {
-    return strcmp(cmdInfo->command, "exit") && strcmp(cmdInfo->command, "cd") && strcmp(cmdInfo->command, "path");
+int checkIsCommandBuiltIn(struct CommandInfo *cmdInfo) {
+    if((strcmp(cmdInfo->command, "exit") && strcmp(cmdInfo->command, "cd") && strcmp(cmdInfo->command, "path")) == 0)
+    {
+        cmdInfo->isBuiltInCmd = 1;
+        return 0;
+    }
+
+    return -1;
 }
 
 void processExit() {
@@ -126,8 +185,36 @@ void processExit() {
 void processPath(int argc, char *argv[]) {
     freeShellPathList();
 
-    for (int i = 0; i < argc; ++i) {
-        insertNewShellPath(argv[i]);
+    if(argc == 1)
+    {
+        /* case: path 后面没有任何参数  */
+        return;
+    }
+
+    for (int i = 1; i < argc; ++i) {
+        char* newShellPath = NULL;
+
+        if(argv[i][0] == '/')
+        {
+            /* 如果是绝对路径直接加进去 */
+            newShellPath = copyStringUsingMalloc(argv[i]);
+        }
+        else
+        {
+            char *currentWorkDir = NULL;
+            if((currentWorkDir = getcwd(NULL, 0)) == NULL)
+            {
+                printErrorMassageToStderr();
+                continue;
+            }
+
+            char *absolutePath = (char *) malloc(strlen(currentWorkDir) + strlen(argv[i]) + 1);
+            sprintf(absolutePath, "%s%s%s", currentWorkDir, "/", argv[i]);
+            free(currentWorkDir);
+
+            newShellPath = absolutePath;
+        }
+        insertNewShellPath(newShellPath);
     }
 }
 
@@ -141,9 +228,15 @@ int processCd(const char *dirName) {
 
 void runBuiltInCommand(struct CommandInfo *cmdInfo) {
     if (strcmp(cmdInfo->command, "exit") == 0) {
+        if(cmdInfo->argc > 1)
+        {
+            printErrorMassageToStderr();
+            return;
+        }
+
         processExit();
     } else if (strcmp(cmdInfo->command, "cd") == 0) {
-        if (cmdInfo->argc != 1 || processCd(cmdInfo->argv[0]) == -1) {
+        if (cmdInfo->argc != 2 || processCd(cmdInfo->argv[1]) == -1) {
             printErrorMassageToStderr();
         }
     } else {
@@ -151,19 +244,118 @@ void runBuiltInCommand(struct CommandInfo *cmdInfo) {
     }
 }
 
+int needRedirection(char *instruction, char **redirectionFilesStart)
+{
+    int count = 0;
+    *redirectionFilesStart = instruction;
+    while(**redirectionFilesStart != '\0')
+    {
+        if(**redirectionFilesStart == '>')
+        {
+            if(count == 0)
+            {
+                return -1;
+            }
+
+            **redirectionFilesStart = '\0';
+            ++*redirectionFilesStart;
+            return 1;
+        }
+
+        ++*redirectionFilesStart;
+        ++count;
+    }
+
+    return 0;
+}
+
+int copyFileContentToOtherFile(int srcFd, const char* destFileName)
+{
+    char buf[1024];
+    bzero(buf, 1024);
+
+    int destFd = open(destFileName, O_RDWR | O_CREAT | O_TRUNC);
+    if(destFd < 0)
+    {
+        return -1;
+    }
+
+    int readCount = 0;
+    while((readCount = read(srcFd, buf, 1024)) > 0)
+    {
+        if(write(destFd, buf, readCount) < 0)
+        {
+            return -1;
+        }
+        bzero(buf, 1024);
+    }
+
+    close(destFd);
+    return 0;
+}
+
 void parseAnInstruction(char *instruction) {
     struct CommandInfo cmdInfo;
+    bzero(&cmdInfo, sizeof(struct CommandInfo));
     char *tempPtr = NULL;
     int count = 0;
 
+    while(*instruction == ' ' || *instruction == '\t')
+    {
+        ++instruction;
+    }
+
+    /* 判断是否需要重定向输出 */
+    char* redirectionFilesStart = NULL;
+    int need = needRedirection(instruction, &redirectionFilesStart);
+    if(need == 1)
+    {
+        while(*redirectionFilesStart == ' ' || *redirectionFilesStart == '\t')
+        {
+            ++redirectionFilesStart;
+        }
+
+        int count = 0;
+        while((tempPtr = strsep(&redirectionFilesStart, " \t")) != NULL)
+        {
+            if(strcmp(tempPtr, "")  == 0)
+            {
+                break;
+            }
+
+            if(count == 0)
+            {
+                cmdInfo.fileNameOfRedirection = tempPtr;
+            }
+            ++count;
+        }
+
+        if(count == 1) {
+            cmdInfo.needRedirection = 1;
+        }
+        else {
+            cmdInfo.needRedirection = -1;
+        }
+
+        tempPtr = NULL;
+    }
+    else if(need == -1)
+    {
+        cmdInfo.needRedirection = -1;
+        cmdInfo.command = "error";
+        insertNewCommandInfo(cmdInfo);
+        return;
+    }
+
     while ((tempPtr = strsep(&instruction, " \t")) != NULL) {
+        if(strcmp(tempPtr, "") == 0)
+        {
+            break;
+        }
+
         if (count == 0) {
             cmdInfo.command = tempPtr;
-        } else if (strcmp(tempPtr, ">") == 0) {
-            cmdInfo.needRedirection = 1;
-        } else if (cmdInfo.needRedirection == 1) {
-            cmdInfo.fileNameOfRedirection = tempPtr;
-            break;
+            cmdInfo.argv[cmdInfo.argc++] = tempPtr;
         } else {
             cmdInfo.argv[cmdInfo.argc++] = tempPtr;
         }
@@ -172,7 +364,7 @@ void parseAnInstruction(char *instruction) {
         tempPtr = NULL;
     }
 
-    if (cmdInfo.command != NULL) {
+    if (cmdInfo.command != NULL && strcmp(cmdInfo.command, "") != 0) {
         insertNewCommandInfo(cmdInfo);
     }
 }
@@ -180,7 +372,12 @@ void parseAnInstruction(char *instruction) {
 
 void parseALineToInstructions(char *instructionLine) {
     char *tempPtr = NULL;
-    while ((tempPtr = strsep(&instructionLine, "&")) != NULL) {
+    while ((tempPtr = strsep(&instructionLine, "&\n")) != NULL) {
+        if(strcmp(tempPtr, "") == 0)
+        {
+            break;
+        }
+
         parseAnInstruction(tempPtr);
         tempPtr = NULL;
     }
@@ -190,67 +387,76 @@ void parseALineToInstructions(char *instructionLine) {
 void processInstruction(char *instructionLine) {
     parseALineToInstructions(instructionLine);
 
+    int childCount = 0;
     for (int i = 0; i != curPosOfcmdInfo; ++i) {
         struct CommandInfo *curCommand = &cmdInfoSet[i];
 
         if (checkIsCommandBuiltIn(curCommand) == 0) {
             runBuiltInCommand(curCommand);
             continue;
-        } else if (checkvalidityOfNonBuiltInCommand(curCommand) == -1 || !isShellPathEmpty()) {
+        } else if (isShellPathEmpty() || checkvalidityOfNonBuiltInCommand(curCommand) == -1) {
             /* 如果非内建命令不合法则报错后继续等待接收下一条指令 */
             printErrorMassageToStderr();
             continue;
         }
 
-        pid_t pid = fork();
-        if (pid == -1) {
+        pid_t pid = -1;
+        if ((pid = fork()) < 0) {
             printErrorMassageToStderr();
             continue;
         }
-
-        if (pid == 0) {
+        else if (pid == 0) {
             int redirectionFd = -1;
             if (curCommand->needRedirection == 1) {
                 /* 如果需要重定向，则需要子进程在execv运行进程前将自己的stdout对应的fd(即1)关闭 */
                 close(STDOUT_FILENO);
 
-                redirectionFd = open(curCommand->fileNameOfRedirection, O_RDWR);
+                redirectionFd = open(curCommand->fileNameOfRedirection, O_RDWR | O_CREAT | O_TRUNC);
                 if (redirectionFd == -1) {
                     printErrorMassageToStderr();
-                    continue;
+                    exit(1);
                 }
             }
 
             if (execv(curCommand->command, curCommand->argv) == -1) {
-                printErrorMassageToStderr();
-                continue;
+                exitForErrorWithoutMemoryLeak();
             }
 
             close(redirectionFd);
-        } else {
-            if (waitpid(pid, NULL, WUNTRACED) != pid) {
-                printErrorMassageToStderr();
-                continue;
-            }
+            exit(0);
         }
+        else
+        {
+            ++childCount;
+        }
+    }
+
+    while(childCount--)
+    {
+        wait(NULL);
     }
 
     clearCmdInfoSet();
 }
 
 void shellRun(FILE *fp, const char *prompt) {
+    char* instructionLines[10] = { NULL };
+    int instructionNum = 0;
     char *instructionLine = NULL;
     size_t zero = 0;
-    while (getline(&instructionLine, &zero, fp) != -1) {
-        char *needFree = instructionLine;
-        processInstruction(instructionLine);
-        free(needFree);
-        instructionLine = NULL;
-        printf("%s", prompt);
-    }
-    free(instructionLine);
 
-    fclose(fp);
+    while (getline(&instructionLine, &zero, fp) != -1) {
+        instructionLines[instructionNum++] = copyStringUsingMalloc(instructionLine);
+    }
+
+    for(int i = 0; i < instructionNum; ++i)
+    {
+        instructionLine = instructionLines[i];
+        processInstruction(instructionLine);
+        free(instructionLine);
+        instructionLine = NULL;
+    }
+
     processExit();
 }
 
@@ -263,17 +469,13 @@ void startCommandLineMode() {
 
 
 void startBatchMode(const char *batchFileName) {
-    if (access(batchFileName, F_OK) == -1) {
-        printf("file not fount!\n");
-        exit(1);
-    }
-
-    FILE *fp = fopen("tests/1.in", "r");
+    FILE *fp = fopen(batchFileName, "r");
     if (fp == NULL) {
         exitForErrorWithoutMemoryLeak();
     }
 
     shellRun(fp, "");
+    fclose(fp);
 }
 
 int main(int argc, char *argv[]) {
@@ -283,12 +485,12 @@ int main(int argc, char *argv[]) {
     }
 
     initShellPath();
+    clearCmdInfoSet();
 
     if (argc == 1) {
         startCommandLineMode();
     } else {
-        //startBatchMode(argv[1]);
-        startBatchMode("tests/1.in");
+        startBatchMode(argv[1]);
     }
 
     return 0;
